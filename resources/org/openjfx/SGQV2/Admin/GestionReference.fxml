@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Administration.GestionReferenceController">
+    <children>
+        <JFXButton fx:id="btnRetour" layoutX="64.0" layoutY="40.0" onAction="#btnRetourClicked" prefHeight="40.0" prefWidth="100.0" text="Retour">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <TableView fx:id="tvReference" layoutX="64.0" layoutY="125.0" prefHeight="500.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+            <columns>
+                <TableColumn fx:id="colCRI" prefWidth="119.66667175292969" text="CRI" />
+                <TableColumn fx:id="colCRC" prefWidth="126.0" text="CRC" />
+                <TableColumn fx:id="colProjet" prefWidth="135.0" text="Projet" />
+            <TableColumn fx:id="colFamille" prefWidth="176.0" text="Famille" />
+                <TableColumn fx:id="colCommentaire" prefWidth="171.66668701171875" text="Commentaire" />
+                <TableColumn fx:id="colDateCreation" prefWidth="231.33331298828125" text="Date de creation" />
+            </columns>
+        </TableView>
+        <JFXButton fx:id="btnAjouterReference" layoutX="866.0" layoutY="647.0" onAction="#ajouterReference" prefHeight="40.0" prefWidth="100.0" text="Ajouter">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnModifierReference" layoutX="746.0" layoutY="647.0" onAction="#modifierReference" prefHeight="40.0" prefWidth="100.0" text="Modifier">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnSupprimerReference" layoutX="616.0" layoutY="647.0" onAction="#supprimerReference" prefHeight="40.0" prefWidth="110.0" text="Supprimer">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+      <Label layoutX="400.0" layoutY="40.0" text="GESTION DES REFERENCES">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

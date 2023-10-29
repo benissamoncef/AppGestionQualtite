@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Forms.FormulaireProduitController">
+<content>
+<AnchorPane prefHeight="4000.0" prefWidth="1024.0" stylesheets="@CSS/Administration.css">
+   <children>
+      <TableView fx:id="TAP" layoutX="64.0" layoutY="450.0" prefHeight="1000.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+        <columns>
+                  <TableColumn prefWidth="940.0" sortable="false" text="Tableau Audit produit">
+                     <columns>
+                <TableColumn fx:id="TapColQ" prefWidth="300.0" sortable="false" text="Questions" />
+                <TableColumn fx:id="colcr1" minWidth="0.0" prefWidth="110.0">
+                           <columns>
+                              <TableColumn fx:id="TapColC1" prefWidth="110.0" sortable="false" text="Créneau 1" />
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TapREFc1" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colcr2" prefWidth="110.0">
+                           <columns>
+                              <TableColumn fx:id="TapColC2" prefWidth="110.0" sortable="false" text="Créneau 2" />
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TapREFc2" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colcr3" prefWidth="110.0">
+                           <columns>
+                              <TableColumn fx:id="TapColC3" prefWidth="110.0" sortable="false" text="Créneau 3" />
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TapREFc3" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colcr4" prefWidth="126.0">
+                           <columns>
+                              <TableColumn fx:id="TapColC4" prefWidth="110.0" sortable="false" text="Créneau 4" />
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TapREFc4" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="TapColDD" prefWidth="200.0" sortable="false" text="Description du défault" />
+                     </columns>
+                  </TableColumn>
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnEnregistrer" layoutX="314.0" layoutY="3708.0" onAction="#enregistrerReponse" prefHeight="96.0" prefWidth="380.0" text="Enregistrer ">
+               <font>
+                  <Font size="24.0" />
+               </font></JFXButton>
+            <Label layoutX="64.0" layoutY="118.0" style="-fx-font-size: 32;" text="RAPPORT AUDIT PRODUIT  ET DE LA 1ère PIECE - ASSEMBLAGE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="228.0" text="Ligne">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="64.0" layoutY="228.0" text="Famille">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelFamille" layoutX="64.0" layoutY="278.0" prefHeight="26.0" prefWidth="106.0" text="Label" />
+            <Label fx:id="labelLigne" alignment="CENTER" layoutX="284.0" layoutY="278.0" text="Label" />
+            <Label alignment="CENTER" layoutX="614.0" layoutY="228.0" text="Shift">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="394.0" layoutY="228.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="228.0" text="Nom d'auditeur">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="504.0" layoutY="228.0" text="Equipe">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelEquipe" alignment="CENTER" layoutX="504.0" layoutY="278.0" text="Label" />
+            <Label fx:id="labelNomAuditeur" alignment="CENTER" layoutX="834.0" layoutY="278.0" text="Label" />
+            <Label fx:id="labelDate" alignment="CENTER" layoutX="394.0" layoutY="278.0" text="Label" />
+            <Label fx:id="labelShift" alignment="CENTER" layoutX="614.0" layoutY="278.0" text="Label" />
+            <Label alignment="CENTER" layoutX="724.0" layoutY="228.0" text="Matricule">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelMatricule" alignment="CENTER" layoutX="724.0" layoutY="278.0" text="Label" />
+            <TableView fx:id="TPP" layoutX="64.0" layoutY="1550.0" maxWidth="940.0" prefHeight="1000.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+               <columns>
+                  <TableColumn editable="false" prefWidth="940.0" sortable="false" text="1ère pièce à contrôler à chaque début de shift, nouvelle référence ou intervention de maintenance ">
+                     <columns>
+                        <TableColumn fx:id="TPPColQ" prefWidth="300.0" text="Questions" />
+                        <TableColumn fx:id="TppColC1" maxWidth="110.0" minWidth="0.0" prefWidth="110.0">
+                           <columns>
+                              <TableColumn prefWidth="110.0">
+                                 <columns>
+                                    <TableColumn fx:id="TPP1" prefWidth="110.0">
+                                       <graphic>
+                                          <JFXTextField fx:id="TPPtfnt1" promptText="Numéro du tableau">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </graphic>
+                                    </TableColumn>
+                                 </columns>
+                                 <graphic>
+                                    <JFXTextField fx:id="TPPtfsn1" promptText="Serial number ">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TppREFc1" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="TppColC2" prefWidth="110.0">
+                           <columns>
+                              <TableColumn prefWidth="110.0">
+                                 <columns>
+                                    <TableColumn fx:id="TPP2" prefWidth="110.0">
+                                       <graphic>
+                                          <JFXTextField fx:id="TPPtfnt2" promptText="Numéro du tableau">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </graphic>
+                                    </TableColumn>
+                                 </columns>
+                                 <graphic>
+                                    <JFXTextField fx:id="TPPtfsn2" promptText="Serial number ">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TppREFc2" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="TppColC3" prefWidth="154.66668701171875">
+                           <columns>
+                              <TableColumn prefWidth="96.66668701171875">
+                                 <columns>
+                                    <TableColumn fx:id="TPP3" prefWidth="110.0">
+                                       <graphic>
+                                          <JFXTextField fx:id="TPPtfnt3" promptText="Numéro du tableau">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </graphic>
+                                    </TableColumn>
+                                 </columns>
+                                 <graphic>
+                                    <JFXTextField fx:id="TPPtfsn3" promptText="Serial number ">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TppREFc3" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="TppColC4" prefWidth="285.33331298828125">
+                           <columns>
+                              <TableColumn prefWidth="110.0">
+                                 <columns>
+                                    <TableColumn fx:id="TPP4" prefWidth="110.0">
+                                       <graphic>
+                                          <JFXTextField fx:id="TPPtfnt4" promptText="Numéro du tableau">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </graphic>
+                                    </TableColumn>
+                                 </columns>
+                                 <graphic>
+                                    <JFXTextField fx:id="TPPtfsn4" promptText="Serial number ">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                           <graphic>
+                              <JFXComboBox fx:id="TppREFc4" prefHeight="30.0" prefWidth="110.0" promptText="Reference" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="TPPColDD" prefWidth="200.0" text="Description du défault" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Label layoutX="64.0" layoutY="400.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Tableau Audit Produit: ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="1500.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Tableau 1ère pièce: ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="2653.0" prefHeight="40.0" prefWidth="360.0" style="-fx-font-size: 12;" text="QUANTITE DES PIECES PAR LOT (SHIFT PRODUCTION)" wrapText="true" />
+            <JFXTextField fx:id="cdtfq1" layoutX="410.0" layoutY="2653.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="2693.0" prefHeight="30.0" prefWidth="395.0" style="-fx-font-size: 12;" text="QUNATITE DES PIECES AUDITE Contrôle dimensionnel 25%" />
+            <JFXTextField fx:id="cdtfq2" layoutX="410.0" layoutY="2693.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cdtfq3" layoutX="410.0" layoutY="2733.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cdtfq4" layoutX="410.0" layoutY="2773.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cdtfq5" layoutX="410.0" layoutY="2813.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="2733.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="QUANTITY DES PIECES DEFECTUEUSES" />
+            <Label layoutX="64.0" layoutY="2773.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="\% OF QUALITY (100%-NON CONFORMITE)" />
+            <Label layoutX="64.0" layoutY="2813.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="\% OF NON CONFORMITE" />
+            <Label layoutX="550.0" layoutY="2653.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="QUANTITE DES PIECES PAR LOT (SHIFT PRODUCTION)" wrapText="true" />
+            <JFXTextField fx:id="cvtfq1" layoutX="880.0" layoutY="2653.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="550.0" layoutY="2693.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="QUNATITE DES PIECES AUDITE Contrôle visuel" />
+            <JFXTextField fx:id="cvtfq2" layoutX="880.0" layoutY="2693.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cvtfq3" layoutX="880.0" layoutY="2733.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cvtfq4" layoutX="880.0" layoutY="2773.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="cvtfq5" layoutX="880.0" layoutY="2813.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="550.0" layoutY="2733.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="QUANTITY DES PIECES DEFECTUEUSES" />
+            <Label layoutX="550.0" layoutY="2773.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="\% OF QUALITY (100%-NON CONFORMITE)" />
+            <Label layoutX="550.0" layoutY="2813.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="\% OF NON CONFORMITE" />
+            <Label layoutX="64.0" layoutY="2955.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="TABLEAU DIMENTIONNEL" wrapText="true" />
+            <JFXTextField fx:id="mpctfq1" layoutX="410.0" layoutY="2955.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="2995.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="TEST ELECTRIQUE" />
+            <JFXTextField fx:id="mpctfq2" layoutX="410.0" layoutY="2995.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="mpctfq3" layoutX="410.0" layoutY="3035.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="mpctfq4" layoutX="410.0" layoutY="3075.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXTextField fx:id="mpctfq5" layoutX="410.0" layoutY="3115.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="3035.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="CLIP CHECKER / TEST BRACKET (CANAL)" />
+            <Label layoutX="64.0" layoutY="3075.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="CONTROL VISUEL" />
+            <Label layoutX="64.0" layoutY="3115.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="RÉPARATEUR (REWORKER)" />
+            <JFXTextField fx:id="mpctfq6" layoutX="410.0" layoutY="3155.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="3155.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="OPÉRATEUR DU TEST D'ÉTANCHEITÉ " />
+            <Label layoutX="626.0" layoutY="2955.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="EST-CE QU'IL EST VALIDÉ ?" wrapText="true" />
+            <Label layoutX="626.0" layoutY="2995.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="GRADUATION DÉGRADÉE ?" />
+            <Label layoutX="626.0" layoutY="3035.0" prefHeight="30.0" prefWidth="320.0" style="-fx-font-size: 12;" text="CASSÉ / USÉ ?" />
+            <JFXComboBox fx:id="statutcb1" layoutX="880.0" layoutY="2955.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXComboBox fx:id="statutcb2" layoutX="880.0" layoutY="2995.0" prefHeight="30.0" prefWidth="100.0" />
+            <JFXComboBox fx:id="statutcb3" layoutX="880.0" layoutY="3035.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="64.0" layoutY="2900.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Matricule des postes de contrôl  (Postes VS)">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="2600.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Contrôle dimensionnel">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="2600.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Contrôle visuel">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="626.0" layoutY="2900.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Statut">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="TSNbtnAjouter" layoutX="741.0" layoutY="3505.0" onAction="#ajouterSN" prefHeight="40.0" prefWidth="100.0" text="Ajouter" />
+            <JFXTextField fx:id="TSNtf" layoutX="518.0" layoutY="3515.0" prefHeight="25.0" prefWidth="204.0" promptText="4 DIGITS" />
+            <Label layoutX="64.0" layoutY="3243.0" style="-fx-font-size: 24; -fx-font-weight: extra+bold;" text="Serial number des pièces audités durant l'audit produit (4 digits)">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="TSN" layoutX="50.0" layoutY="3295.0" prefHeight="200.0" prefWidth="929.0" />
+            <JFXButton fx:id="btnSupprimerSN" layoutX="848.0" layoutY="3505.0" onAction="#supprimerSN" prefHeight="40.0" prefWidth="128.0" text="Supprimer" />
+            <Label layoutX="174.0" layoutY="228.0" text="Zone">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelZone" layoutX="174.0" layoutY="278.0" text="Label" />
+            <JFXButton fx:id="BtnEnregistrerModAdmin" layoutX="314.0" layoutY="3708.0" onAction="#BtnEnregistrerModAdminClicked" prefHeight="96.0" prefWidth="380.0" text="Enregistrer les modifications">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="BtnRetour" layoutX="64.0" layoutY="40.0" onAction="#BtnRetourClicked" prefHeight="40.0" prefWidth="100.0" text="Retour" />
+   </children>
+</AnchorPane>
+   </content>
+</ScrollPane>

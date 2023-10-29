@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawingsControllers.DrawingsIngQualitéController">
+   <children>
+      <JFXTextField fx:id="SearchField" layoutX="256.0" layoutY="64.0" onKeyPressed="#Btnsearch" prefHeight="32.0" prefWidth="224.0" />
+      <FontAwesomeIconView fx:id="Btnsearch" fill="#8d0000" glyphName="SEARCH" layoutX="512.0" layoutY="87.0" onMousePressed="#BtnsearchClicked" size="24" />
+      <TableView fx:id="DrawingTable" layoutX="32.0" layoutY="145.0" prefHeight="524.0" prefWidth="704.0" stylesheets="@CSS/tableView.css">
+        <columns>
+          <TableColumn fx:id="DrawingColumn" maxWidth="288.0" minWidth="288.0" prefWidth="288.0" text="Drawing" />
+            <TableColumn fx:id="RévisionColumn" maxWidth="64.0" minWidth="64.0" prefWidth="64.0" text="Révision" />
+            <TableColumn fx:id="DateRévisionColumn" maxWidth="176.0" minWidth="176.0" prefWidth="176.0" text="Date de Révision" />
+          <TableColumn fx:id="DateCréationColumn" maxWidth="176.0" minWidth="176.0" prefWidth="176.0" text="Date de création" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

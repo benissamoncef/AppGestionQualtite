@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Administration.GestionZoneController">
+   <children>
+      <JFXButton fx:id="BtnRetour" layoutX="64.0" layoutY="40.0" maxWidth="100.0" onAction="#BtnRetourClicked" prefHeight="40.0" text="Retour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tvZone" layoutX="64.0" layoutY="125.0" prefHeight="500.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+         <columns>
+            <TableColumn fx:id="colIdZone" prefWidth="400.3333435058594" text="Id zone" />
+            <TableColumn fx:id="colCommentaire" prefWidth="558.6666564941406" text="Commentaire" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAjouterZone" layoutX="866.0" layoutY="647.0" maxWidth="100.0" onAction="#ajouterZone" prefHeight="40.0" text="Ajouter">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnModifierZone" layoutX="746.0" layoutY="647.0" maxWidth="100.0" onAction="#modifierZone" prefHeight="40.0" text="Modifier">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSupprimerZone" layoutX="616.0" layoutY="647.0" maxWidth="111.0" onAction="#supprimerZone" prefHeight="40.0" prefWidth="110.0" text="Supprimer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="400.0" layoutY="40.0" text="GESTION DES ZONES">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="1920.0" prefWidth="1080" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoard.DashBoardController">
+ <content>
+<AnchorPane prefHeight="1920.0" prefWidth="1080.0" style="-fx-background-color: #606060;">
+   <children>
+     
+      <BarChart fx:id="CHART_DEFAUTS_ZONE" layoutX="60.0" layoutY="1102.0" prefHeight="320.0" prefWidth="960.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="CHART_DEFAUTS_LIGNE" layoutX="60.0" layoutY="1575.0" prefHeight="320.0" prefWidth="960.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+         </yAxis>
+      </BarChart>
+      <LineChart fx:id="CHART_IPPM_ZONE" layoutX="60.0" layoutY="153.0" prefHeight="320.0" prefWidth="960.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="CHART_IPPM_LIGNE" layoutX="60.0" layoutY="626.0" prefHeight="320.0" prefWidth="960.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </LineChart>
+      <JFXComboBox fx:id="ComboBoxIZ" layoutX="860.0" layoutY="124.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="800.0" layoutY="124.0" prefHeight="24.0" prefWidth="48.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="412.0" layoutY="56.0" prefHeight="24.0" prefWidth="256.0" text="IPPM / ZONE" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="412.0" layoutY="522.0" prefHeight="24.0" prefWidth="256.0" text="IPPM / LIGNE" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="800.0" layoutY="594.0" prefHeight="24.0" prefWidth="48.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxIL" layoutX="860.0" layoutY="594.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <Label alignment="CENTER" layoutX="422.0" layoutY="998.0" prefHeight="24.0" prefWidth="256.0" text="DEFAUTS / ZONE" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="422.0" layoutY="1474.0" prefHeight="24.0" prefWidth="256.0" text="DEFAUTS / LIGNE" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="800.0" layoutY="1070.0" prefHeight="24.0" prefWidth="48.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxDZ" layoutX="860.0" layoutY="1070.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="800.0" layoutY="1546.0" prefHeight="24.0" prefWidth="48.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxDL" layoutX="860.0" layoutY="1546.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <ImageView fx:id="refreshIPPMZone" fitHeight="30.0" fitWidth="30.0" layoutX="523.0" layoutY="110.0" onMousePressed="#refreshIPPMZoneClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-refresh-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="refreshIPPMLigne" fitHeight="30.0" fitWidth="30.0" layoutX="522.0" layoutY="581.0" onMousePressed="#refreshIPPMLigneClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-refresh-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="refreshDefautsZone" fitHeight="30.0" fitWidth="30.0" layoutX="526.0" layoutY="1057.0" onMousePressed="#refreshDefautsZoneClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-refresh-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="refreshDefautsLigne" fitHeight="30.0" fitWidth="30.0" layoutX="525.0" layoutY="1532.0" onMousePressed="#refreshDefautsLigneClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-refresh-30.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="ZoneComboBoxIL" layoutX="192.0" layoutY="594.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="128.0" layoutY="594.0" prefHeight="24.0" prefWidth="64.0" text="ZONE :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ZoneComboBoxDL" layoutX="192.0" layoutY="1546.0" prefHeight="24.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="128.0" layoutY="1546.0" prefHeight="24.0" prefWidth="64.0" text="ZONE :" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
+</content>
+</ScrollPane>

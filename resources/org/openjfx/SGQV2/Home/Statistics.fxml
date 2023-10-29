@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuControllers.StatisticsController">
+   <children>
+      <JFXButton fx:id="ippmButton" layoutX="84.0" layoutY="200.0" onAction="#ippmButtonClicked" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #8d0000;" text="IP PERFORMANCE MEASUREMENT">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="DéfautsButton" layoutX="84.0" layoutY="400.0" onAction="#DéfautsButtonClicked" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #8d0000;" text="QUANTITE DE DEFAUTS">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

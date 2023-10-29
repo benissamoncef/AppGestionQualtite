@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Administration.Add_ModCompteController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.3;">
+         <image>
+            <Image url="@background_image.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="BtnAjouterCompte" layoutX="470.0" layoutY="320.0" onAction="#BtnAjouterCompteClicked" prefHeight="40.0" prefWidth="100.0" text="Ajouter" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="BtnModifierCompte" layoutX="470.0" layoutY="320.0" onAction="#BtnModifierCompteClicked" prefHeight="40.0" prefWidth="100.0" text="Modifier " visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="12.0" layoutY="32.0" prefHeight="30.0" prefWidth="120.0" style="-fx-text-alignment: left;" text="Employée:">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxEmployée" layoutX="192.0" layoutY="32.0" prefHeight="30.0" prefWidth="192.0" />
+      <Label layoutX="12.0" layoutY="96.0" prefHeight="30.0" prefWidth="128.0" text="Type Compte:">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxTypesCompte" layoutX="192.0" layoutY="96.0" onAction="#TechnicienSelected" prefHeight="30.0" prefWidth="128.0" />
+      <Label fx:id="labelAdmin" layoutX="330.0" layoutY="96.0" prefHeight="30.0" prefWidth="128.0" style="-fx-text-alignment: left;" text="Administrateur:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxAdministrateur" layoutX="456.0" layoutY="96.0" prefHeight="30.0" prefWidth="128.0" />
+      <Label layoutX="12.0" layoutY="160.0" prefHeight="30.0" prefWidth="160.0" style="-fx-text-alignment: left;" text="Nom d'utilisateur:">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="UsernameField" layoutX="192.0" layoutY="160.0" prefHeight="30.0" prefWidth="192.0" />
+      <Label layoutX="16.0" layoutY="224.0" prefHeight="30.0" prefWidth="128.0" style="-fx-text-alignment: left;" text="Mot de passe:">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </Label>
+      <JFXPasswordField fx:id="PasswordField" layoutX="32.0" layoutY="256.0" prefHeight="30.0" prefWidth="172.0" />
+      <Label layoutX="224.0" layoutY="227.0" prefHeight="30.0" prefWidth="237.0" style="-fx-text-alignment: left;" text="Confirmer le Mot de passe" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </Label>
+      <JFXPasswordField fx:id="ConfirmPasswordField" layoutX="256.0" layoutY="256.0" prefHeight="30.0" prefWidth="172.0" />
+      <Label layoutX="220.0" layoutY="40.0" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size: 18;" text="AJOUTER COMPTE" visible="false" />
+      <Label layoutX="220.0" layoutY="40.0" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size: 18;" text="MODIFIER COMPTE" visible="false" />
+   </children>
+</AnchorPane>

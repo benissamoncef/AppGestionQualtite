@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import tornadofx.control.DateTimePicker?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuControllers.IPPM_StatsController">
+   <children>
+      <JFXComboBox fx:id="ClientComboBox" layoutX="64.0" layoutY="128.0" prefWidth="128.0" promptText="Client" visible="false" />
+      <JFXComboBox fx:id="ProjetComboBox" focusColor="#eeeeee" layoutX="64.0" layoutY="172.0" onMousePressed="#ProjetComboBoxClicked" prefWidth="128.0" promptText="Projet" unFocusColor="#8d0000" />
+      <JFXCheckBox fx:id="ClientCheckBox" layoutX="72.0" layoutY="70.0" onAction="#checkBoxClicked" text="Client" textFill="#8d0000" />
+      <JFXCheckBox fx:id="ProjetCheckBox" layoutX="212.0" layoutY="70.0" onAction="#checkBoxClicked" text="Projet" textFill="#8d0000" />
+      <JFXCheckBox fx:id="FamilleCheckBox" layoutX="353.0" layoutY="70.0" onAction="#checkBoxClicked" text="Famille" textFill="#8d0000" />
+      <JFXCheckBox fx:id="LigneCheckBox" layoutX="649.0" layoutY="70.0" onAction="#checkBoxClicked" text="Ligne" textFill="#8d0000" />
+      <JFXCheckBox fx:id="ZoneCheckBox" layoutX="508.0" layoutY="70.0" onAction="#checkBoxClicked" text="Zone" textFill="#8d0000" />
+      <BarChart fx:id="BarChart" layoutY="240.0" prefHeight="482.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;">
+        <xAxis>
+          <CategoryAxis fx:id="LabelX" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="LabelY" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <JFXComboBox fx:id="TimeComboBox" focusColor="#eeeeee" layoutX="580.0" layoutY="128.0" onAction="#TimeComboBoxClicked" prefWidth="120.0" unFocusColor="#8d0000" />
+      <JFXComboBox fx:id="SpécifiqueFilter" focusColor="#8d0000" layoutX="634.0" layoutY="227.0" onMousePressed="#SpécifiqueFilterClicked" prefWidth="120.0" unFocusColor="#eeeeee" />
+      <JFXComboBox fx:id="ZoneComboBox" focusColor="#eeeeee" layoutX="64.0" layoutY="128.0" prefWidth="128.0" promptText="Zone" unFocusColor="#8d0000" />
+      <DateTimePicker fx:id="yearPicker" format="yyyy" layoutX="584.0" layoutY="172.0" prefWidth="120.0" />
+      <DateTimePicker fx:id="monthPeaker" format="yyyy-MM" layoutX="584.0" layoutY="172.0" prefWidth="120.0" />
+      <DateTimePicker fx:id="dayPeaker" format="yyyy-MM-dd" layoutX="584.0" layoutY="172.0" prefWidth="120.0" style="-fx-background-color: #eeeeee;" />
+      <Button fx:id="BtnSearch" layoutX="316.0" layoutY="172.0" mnemonicParsing="false" onAction="#BtnSearchClicked" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #8D0000;">
+         <graphic>
+            <FontAwesomeIconView fill="#eeeeee" glyphName="SEARCH" />
+         </graphic>
+      </Button>
+      <Label fx:id="TimeLabel" layoutX="500.0" layoutY="131.0" style="-fx-font-size: 14;" text="Temps :" textFill="#8e0000" />
+   </children>
+</AnchorPane>

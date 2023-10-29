@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import impl.com.calendarfx.view.NumericTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawingsControllers.ImporterDrawing">
+   <children>
+      <Label layoutX="64.0" layoutY="192.0" prefHeight="64.0" prefWidth="200.0" style="-fx-font-size: 18;" text="Projet :">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="ImportButton" alignment="CENTER" buttonType="RAISED" layoutX="487.0" layoutY="475.0" onAction="#btnImportClicked" prefHeight="30.0" prefWidth="134.0" ripplerFill="#6f01ff" text="Choose Pdf ..." />
+      <Label fx:id="ImportPath" alignment="CENTER" contentDisplay="CENTER" layoutX="128.0" layoutY="530.0" prefHeight="18.0" prefWidth="550.0" style="-fx-font-size: 12;" />
+      <JFXButton fx:id="AjouterDrawingField" layoutX="330.0" layoutY="600.0" onAction="#btnAjouterDrawingClicked" prefHeight="64.0" prefWidth="146.0" text="Ajouter Drawing" />
+      <Label layoutX="64.0" layoutY="128.0" prefHeight="64.0" prefWidth="192.0" style="-fx-font-size: 18;" text="Client :">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxProjet" layoutX="320.0" layoutY="192.0" onMousePressed="#updateProjets" prefHeight="30.0" prefWidth="300.0" />
+      <Label layoutX="64.0" layoutY="256.0" prefHeight="64.0" prefWidth="200.0" style="-fx-font-size: 18;" text="Famille :">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxRéférence" layoutX="320.0" layoutY="320.0" onMousePressed="#updateRéférences" prefHeight="30.0" prefWidth="300.0" />
+      <Label layoutX="64.0" layoutY="320.0" prefHeight="64.0" prefWidth="200.0" style="-fx-font-size: 18;" text="Référence :">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxFamille" layoutX="320.0" layoutY="256.0" onMousePressed="#updateFamilles" prefHeight="30.0" prefWidth="300.0" />
+      <Label layoutX="64.0" layoutY="456.0" prefHeight="64.0" prefWidth="200.0" style="-fx-font-size: 18;" text="Drawing:">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ComboBoxClient" layoutX="320.0" layoutY="128.0" prefHeight="30.0" prefWidth="300.0" />
+      <Label layoutX="302.0" layoutY="43.0" text="IMPORTER DRAWING" textFill="#8d0000">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="384.0" prefHeight="64.0" prefWidth="200.0" style="-fx-font-size: 18;" text="Révision :">
+         <padding>
+            <Insets left="64.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <NumericTextField fx:id="Révision" layoutX="554.0" layoutY="400.0" prefHeight="32.0" prefWidth="64.0" />
+   </children>
+</AnchorPane>

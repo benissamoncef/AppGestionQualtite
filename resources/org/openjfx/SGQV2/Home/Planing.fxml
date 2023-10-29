@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import tornadofx.control.DateTimePicker?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Planings.PlaningController">
+   <children>
+      <Pane layoutX="26.0" layoutY="65.0" prefHeight="220.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="150.0" style="-fx-font-size: 14; -fx-background-color: #000000;" text="Type Planning :" textFill="WHITE">
+               <font>
+                  <Font name="AdobeDevanagari-Regular" size="16.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="TypesPlanningList" layoutY="46.0" onMousePressed="#TypePlaningClicked" prefHeight="177.0" prefWidth="150.0" style="-fx-background-color: #8d0000;" />
+         </children>
+      </Pane>
+      <Pane layoutX="218.0" layoutY="65.0" prefHeight="220.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="150.0" style="-fx-font-size: 14; -fx-background-color: #000000;" text="Technicien :" textFill="WHITE">
+               <font>
+                  <Font name="AdobeDevanagari-Regular" size="16.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="TechsList" layoutY="47.0" onMousePressed="#TechClicked" prefHeight="177.0" prefWidth="149.0" style="-fx-background-color: #8e0000;" />
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" layoutY="65.0" prefHeight="220.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="150.0" style="-fx-font-size: 14; -fx-background-color: #000000;" text="Zone :" textFill="WHITE" />
+            <JFXListView fx:id="ZonesList" layoutY="46.0" onMousePressed="#updateLines" prefHeight="177.0" prefWidth="150.0" style="-fx-background-color: #8e0000;" />
+         </children>
+      </Pane>
+      <Pane layoutX="578.0" layoutY="65.0" prefHeight="220.0" prefWidth="150.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="150.0" style="-fx-font-size: 14; -fx-background-color: #000000;" text="Ligne :" textFill="WHITE" />
+            <JFXListView fx:id="LinesList" layoutY="47.0" onMousePressed="#LigneClicked" prefHeight="177.0" prefWidth="150.0" style="-fx-background-color: #8e0000;" />
+         </children>
+      </Pane>
+      <TableView fx:id="RapportTable" layoutX="38.0" layoutY="387.0" prefHeight="288.0" prefWidth="690.0" stylesheets="@CSS/tableView.css">
+        <columns>
+          <TableColumn fx:id="ClientColumn" maxWidth="116.0" minWidth="96.0" prefWidth="116.0" text="Client" />
+          <TableColumn fx:id="ProjetColumn" maxWidth="130.66665649414062" minWidth="96.0" prefWidth="111.0" text="Projet" />
+            <TableColumn fx:id="FamilleColumn" maxWidth="154.0" minWidth="96.0" prefWidth="119.33334350585938" text="Famille" />
+            <TableColumn fx:id="DateColumn" maxWidth="200.33331298828125" minWidth="96.0" prefWidth="169.0" text="Date_Création" />
+            <TableColumn fx:id="ActionsColumn" maxWidth="304.0" minWidth="96.0" prefWidth="174.66668701171875" text="Actions" />
+        </columns>
+      </TableView>
+      <DateTimePicker fx:id="TimePeacker" format="yyyy-MM-dd" layoutX="256.0" layoutY="340.0" onAction="#TimeClicked" prefHeight="32.0" prefWidth="192.0" />
+      <Label fx:id="WarningTime" layoutX="456.0" layoutY="606.0" text="Field required !" textFill="RED" visible="false" />
+      <FontAwesomeIconView fx:id="SearchBtn" fill="#8d0000" glyphName="SEARCH" layoutX="460.0" layoutY="364.0" onMousePressed="#SearchBtnClicked" size="24" />
+      <Label fx:id="WarningTypePlaning" layoutX="60.0" layoutY="288.0" style="-fx-font-size: 12; -fx-text-fill: #FF0000;" text="Field required !" textFill="RED" visible="false" />
+      <Label fx:id="WarningTech" layoutX="252.0" layoutY="288.0" style="-fx-font-size: 12; -fx-text-fill: #FF0000;" text="Field required !" textFill="RED" visible="false" />
+      <Label fx:id="WarningZone" layoutX="431.0" layoutY="288.0" style="-fx-font-size: 12; -fx-text-fill: #FF0000;" text="Field required !" textFill="RED" visible="false" />
+      <Label fx:id="WarningLigne" layoutX="612.0" layoutY="288.0" style="-fx-font-size: 12; -fx-text-fill: #FF0000;" text="Field required !" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

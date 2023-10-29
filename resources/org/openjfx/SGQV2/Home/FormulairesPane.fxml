@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #FFFFFF;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuControllers.FormulaireMenuController">
+   <children>
+      <JFXButton fx:id="BtnAProc" layoutX="128.0" layoutY="200.0" onAction="#ChangePane" prefHeight="96.0" prefWidth="512.0" style="-fx-background-color: #8e0000;" text="Déclarer Formulaire Audit Process" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="BtnAProd" layoutX="128.0" layoutY="320.0" onAction="#ChangePane" prefHeight="96.0" prefWidth="512.0" style="-fx-background-color: #8e0000;" text="Déclarer Formulaire Audit Produit" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="32.0" />
+         </font></JFXButton>
+      <Label alignment="CENTER" layoutX="256.0" layoutY="72.0" prefWidth="256.0" text="DECLARER UN FORMULAIRE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="BtnFormPD" layoutX="128.0" layoutY="440.0" onAction="#ChangePane" prefHeight="96.0" prefWidth="512.0" style="-fx-background-color: #8e0000;" text="Déclarer Formulaire de prise de données en montage" textFill="WHITE">
+         <font>
+            <Font name="AdobeDevanagari-Regular" size="32.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

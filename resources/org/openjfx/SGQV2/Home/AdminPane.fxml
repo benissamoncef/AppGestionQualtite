@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="768.0" style="-fx-background-color: #eeeeee;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuControllers.AdminPaneController">
+   <children>
+      <JFXButton fx:id="BtnEmployees" contentDisplay="TOP" layoutX="24.0" layoutY="128.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="EMPLOYEES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-employees-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnComptes" contentDisplay="TOP" layoutX="172.0" layoutY="128.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8D0000;" text="COMPTES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-account-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnClients" contentDisplay="TOP" layoutX="23.0" layoutY="320.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="CLIENTS">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-client-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnProjets" contentDisplay="TOP" layoutX="172.0" layoutY="320.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="PROJETS">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-car-badge-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnFamilles" contentDisplay="TOP" layoutX="320.0" layoutY="320.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="FAMILLES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-car-door-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnReferences" contentDisplay="TOP" layoutX="468.0" layoutY="320.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="REFERENCES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-network-cable-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnZones" contentDisplay="TOP" layoutX="320.0" layoutY="128.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="ZONES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-place-marker-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnLignes" contentDisplay="TOP" layoutX="468.0" layoutY="128.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="LIGNES">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-production-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnShifts" contentDisplay="TOP" layoutX="616.0" layoutY="320.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="SHIFTS">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-clock-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnModels" contentDisplay="TOP" layoutX="616.0" layoutY="128.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="128.0" style="-fx-background-color: #8d0000;" text="MODELS">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-versions-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnQAProcess" contentDisplay="TOP" layoutX="64.0" layoutY="512.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="192.0" style="-fx-background-color: #8d0000;" text="QUESTIONS AUDIT PROCESS" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-google-forms-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnQAProduit" contentDisplay="TOP" layoutX="288.0" layoutY="512.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="192.0" style="-fx-background-color: #8d0000;" text="QUESTIONS AUDIT PRODUIT" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-google-forms-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="BtnQAProduitPremier" contentDisplay="TOP" layoutX="512.0" layoutY="512.0" onAction="#BtnClicked" prefHeight="128.0" prefWidth="192.0" style="-fx-background-color: #8d0000;" text="QUESTIONS AUDIT PRODUIT 1st PIECES" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-google-forms-64.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+   </children>
+</AnchorPane>

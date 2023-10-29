@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #EEEEEE;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Administration.HomeController">
+   <children>
+      <VBox fx:id="HomeMenu" alignment="TOP_CENTER" prefHeight="720.0" prefWidth="256.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="64.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@images/lear.png" />
+               </image></ImageView>
+            <Label fx:id="username" contentDisplay="CENTER" style="-fx-text-fill: #d8d8d8; -fx-font-size: 12;" textFill="WHITE" />
+            <Label fx:id="AccessLevel" contentDisplay="CENTER" style="-fx-text-fill: #d8d8d8; -fx-font-size: 12;" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="64.0" />
+               </VBox.margin></Label>
+            <Button id="btnHome" fx:id="btnImporterDrawing" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Importer Drawing">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/upload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnStatistics" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Statistics">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnFormulaires" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Formulaires">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-task-52(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnAdministration" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Administration">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/adminstration.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#btnSignoutClicked" prefHeight="64.0" prefWidth="256.0" text="Se déconnecter">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/LOGOUT.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnConsulterDrawingAdmin" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Consulter Drawing">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Drawing.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnHome" fx:id="btnRéponsesAuxForms" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ChangePane" prefHeight="64.0" prefWidth="256.0" text="Réponses aux forms">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-formulae-table-with-row-and-column-cells-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="MenuPane" layoutX="256.0" prefHeight="720.0" prefWidth="768.0" />
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

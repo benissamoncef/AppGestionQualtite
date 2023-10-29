@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #eeeeee;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.GestionQuestions.GestionQuestionsController">
+   <children>
+      <TableView fx:id="QuestionTable" fixedCellSize="64.0" layoutX="64.0" layoutY="126.0" prefHeight="500.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+        <columns>
+            <TableColumn fx:id="QuestionColumn" maxWidth="896.0" minWidth="448.0" prefWidth="448.0" text="Question" />
+            <TableColumn fx:id="CommentaireColumn" maxWidth="448.0" minWidth="448.0" prefWidth="448.0" text="Commentaire" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="BtnDelete" layoutX="626.0" layoutY="647.0" onAction="#BtnDeleteClicked" prefHeight="40.0" prefWidth="100.0" text="DELETE" />
+      <JFXButton fx:id="BtnEdit" layoutX="746.0" layoutY="647.0" onAction="#BtnEditClicked" prefHeight="40.0" prefWidth="100.0" text="EDIT" />
+      <JFXButton fx:id="BtnCreate" layoutX="866.0" layoutY="647.0" onAction="#BtnCreateClicked" prefHeight="40.0" prefWidth="100.0" text="CREATE" />
+      <JFXButton fx:id="BtnRetour" layoutX="64.0" layoutY="40.0" onAction="#BtnRetourClicked" prefHeight="40.0" prefWidth="100.0" text="Retour" />
+      <Label fx:id="labelAP" alignment="CENTER" layoutX="400.0" layoutY="40.0" text="QUESTIONS AUDIT PROCESS" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label fx:id="labelTPP" alignment="CENTER" layoutX="270.0" layoutY="42.0" text="QUESTIONS TABLEAU PRODUIT PREMIERE PIECE" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label fx:id="labelTP" alignment="CENTER" layoutX="448.0" layoutY="38.0" text="QUESTION TABLEAU PRODUIT" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

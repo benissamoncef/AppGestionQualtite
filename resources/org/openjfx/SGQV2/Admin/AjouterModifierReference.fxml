@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Administration.Add_ModRéférenceController">
+    <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.3;">
+         <image>
+            <Image url="@background_image.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane layoutX="16.0" layoutY="80.0" prefHeight="258.0" prefWidth="568.0">
+            <children>
+                <Label fx:id="labelAjouterIdZone" layoutX="12.0" layoutY="40.0" text="CRI:">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <Label fx:id="labelAjouterCommentaireZone" layoutX="12.0" layoutY="150.0" text="Commentaire:">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <JFXTextArea fx:id="tfCommentaire" layoutX="133.0" layoutY="150.0" prefHeight="32.0" prefWidth="421.0" />
+                <JFXTextField fx:id="tfCRI" layoutX="85.0" layoutY="40.0" prefHeight="25.0" prefWidth="161.0" />
+                <Label fx:id="labelAjouterIdZone1" layoutX="308.0" layoutY="40.0" text="CRC:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelAjouterCommentaireZone1" layoutX="12.0" layoutY="90.0" text="Projet:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="cbProjet" layoutX="81.0" layoutY="90.0" prefHeight="25.0" prefWidth="167.0" />
+            <JFXTextField fx:id="tfCRC" layoutX="374.0" layoutY="40.0" prefHeight="25.0" prefWidth="178.0" />
+            <Label fx:id="labelAjouterCommentaireZone11" layoutX="308.0" layoutY="90.0" text="Famille:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbFamille" layoutX="374.0" layoutY="90.0" onMousePressed="#updateFamille" prefHeight="25.0" prefWidth="178.0" />
+            </children>
+        </AnchorPane>
+        <Label fx:id="labelAjouter" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="40.0" style="-fx-font-size: 18;" text="AJOUTER REFERENCE" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="40.0" style="-fx-font-size: 18;" text="MODIFIER REFERENCE" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btnEnregistrerAjouterRef" layoutX="480.0" layoutY="320.0" onAction="#enregistrerAjouterReference" prefHeight="40.0" prefWidth="100.0" text="Ajouter">
+            <font>
+                <Font size="18.0" />
+            </font></JFXButton>
+        <JFXButton fx:id="btnEnregistrerModifierRef" layoutX="480.0" layoutY="320.0" onAction="#enregistrerModifierReference" prefHeight="40.0" prefWidth="100.0" text="Modifier">
+            <font>
+                <Font size="18.0" />
+            </font></JFXButton>
+    </children>
+</AnchorPane>

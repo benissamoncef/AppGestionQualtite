@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" stylesheets="@CSS/Administration.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Forms.RépondreFAPController">
+   <children>
+      <TableView fx:id="RéponseAPFTable" layoutX="64.0" layoutY="187.0" prefHeight="456.0" prefWidth="900.0" stylesheets="@CSS/tableView.css">
+        <columns>
+          <TableColumn fx:id="QuestionColumn" maxWidth="768.0" minWidth="200.0" prefWidth="200.0" sortable="false" text="Question" />
+          <TableColumn fx:id="EvaluationColumn" maxWidth="256.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Evaluation" />
+            <TableColumn fx:id="AnomaliesObservéesColumn" maxWidth="256.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="AnomaliesObservées" />
+            <TableColumn fx:id="ActionsExigéesColumn" maxWidth="256.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="ActionsExigées" />
+            <TableColumn fx:id="RespRéalisationColumn" maxWidth="256.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="RespRéalisation" />
+            <TableColumn fx:id="DateRéalisationColumn" maxWidth="256.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="DateRéalisation" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="SaveButton" layoutX="401.0" layoutY="656.0" onAction="#SaveButtonClicked" prefHeight="40.0" prefWidth="250.0" text="Enregistrer Le Formulaire" />
+      <Label layoutX="338.0" layoutY="31.0" style="-fx-font-size: 32;" text="AUDIT PROCESS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="764.0" layoutY="110.0" prefWidth="128.0" text="Semaine d'audit ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="110.0" prefWidth="128.0" text="Client "> 
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="204.0" layoutY="110.0" prefWidth="128.0" text="Projet ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="110.0" prefWidth="128.0" text="Zone ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="110.0" prefWidth="128.0" text="ligne ">
+      <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+	 		<Label layoutX="624.0" layoutY="110.0" prefWidth="128.0" text="Famille ">    	  
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+     	</Label>
+      <Label fx:id="DateaumditValue" layoutX="764.0" layoutY="150.0" prefWidth="128.0" />
+      <Label fx:id="ClientValue" layoutX="64.0" layoutY="150.0" prefWidth="128.0" />
+      <Label fx:id="ProjetValue" layoutX="204.0" layoutY="150.0" prefWidth="128.0" />
+      <Label fx:id="ZoneValue" layoutX="344.0" layoutY="150.0" prefWidth="128.0" />
+      <Label fx:id="LigneValue" layoutX="484.0" layoutY="150.0" prefWidth="128.0" />
+      <Label fx:id="FamilleValue" layoutX="624.0" layoutY="150.0" prefWidth="128.0" />
+      <Label layoutX="784.0" layoutY="40.0" text="Auditeur :">
+      	<font>
+         <Font name="System Bold" size="12.0" />
+       	</font>
+      </Label>
+ 
+      <Label fx:id="AuditeurValue" layoutX="858.0" layoutY="40.0" text="AuditeurValue" />
+      <JFXButton fx:id="EnregistrerAdmin" layoutX="718.0" layoutY="656.0" onAction="#EnregistrerAdminClicked" prefHeight="40.0" prefWidth="250.0" text="Enregistrer les modifications" />
+      <JFXButton fx:id="BtnRetour" layoutX="64.0" layoutY="40.0" onAction="#BtnRetourClicked" prefHeight="40.0" prefWidth="100.0" text="Retour" />
+   </children>
+</AnchorPane>

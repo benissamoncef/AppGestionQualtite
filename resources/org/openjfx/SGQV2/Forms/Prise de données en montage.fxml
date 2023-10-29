@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SGQV2.Forms.FomulairePriseDonnéesController">
+<content>
+<AnchorPane prefHeight="720.0" prefWidth="1024.0">
+   <children>
+      <TableView fx:id="RapportDesDéfautsQualité" layoutX="32.0" layoutY="128.0" prefHeight="512.0" prefWidth="960.0">
+        <columns>
+            <TableColumn prefWidth="75.0" text="Rapport des défauts qualité">
+               <columns>
+                  <TableColumn fx:id="NumColumn" maxWidth="64.0" minWidth="64.0" prefWidth="64.0" text="N°" />
+                <TableColumn fx:id="NumSérieColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="N° Série" />
+                  <TableColumn fx:id="RéfColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Référence" />
+                  <TableColumn fx:id="codeDéfautColumn" maxWidth="256.0" minWidth="76.0" prefWidth="76.0" text="code défaut" />
+                  <TableColumn fx:id="PosteColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Poste" />
+                  <TableColumn fx:id="MatriculeColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Matricule" />
+                  <TableColumn fx:id="ComposantColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Composant" />
+                  <TableColumn fx:id="CircuitColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Circuit" />
+                  <TableColumn fx:id="Voie1Column" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Voie 1" />
+                  <TableColumn fx:id="Voie2Column" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Voie 2" />
+                  <TableColumn fx:id="QteColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Qté" />
+                  <TableColumn fx:id="ObsColumn" maxWidth="256.0" minWidth="82.0" prefWidth="82.0" text="Observation" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="16.0" layoutY="16.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="64.0" text="Team leader :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="16.0" text="Client :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="18.0" text="Ligne :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="64.0" text="T .Qualité :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="672.0" layoutY="16.0" text="Equipe :">
+        <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="848.0" layoutY="16.0" text="Shift :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="672.0" layoutY="64.0" text="MatOpérateur :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="RapportDeProduction" layoutX="32.0" layoutY="716.0" prefHeight="256.0" prefWidth="960.0">
+        <columns>
+            <TableColumn maxWidth="960.0" minWidth="960.0" prefWidth="960.0" text="Rapport de production">
+               <columns>
+                <TableColumn fx:id="NumProductionColumn" maxWidth="64.0" minWidth="64.0" prefWidth="64.0" text="N°" />
+                <TableColumn fx:id="RéfProductionColumn" maxWidth="256.0" minWidth="256.0" prefWidth="256.0" text="Référence" />
+                  <TableColumn fx:id="QteProductionColumn" maxWidth="256.0" minWidth="256.0" prefWidth="256.0" text="Qté.Pro" />
+                  <TableColumn fx:id="ObservationProductionColumn" maxWidth="384.0" minWidth="384.0" prefWidth="384.0" text="Observation" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <TableView fx:id="RapportDesArrêts" layoutX="32.0" layoutY="1048.0" prefHeight="512.0" prefWidth="960.0">
+        <columns>
+          <TableColumn maxWidth="960.0" minWidth="82.66662979125977" prefWidth="180.8000144958496" text="Rapport des arrêts">
+               <columns>
+                <TableColumn fx:id="NumRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="N°" />
+                  <TableColumn fx:id="TypeRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Type d'arret" />
+                  <TableColumn fx:id="intervensionRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="N° Intervension" />
+                  <TableColumn fx:id="intervenantRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Intervenant" />
+                  <TableColumn fx:id="RéfRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Référence" />
+                  <TableColumn fx:id="DescriptionRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Description" />
+                  <TableColumn fx:id="MatriculeRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Matricule" />
+                  <TableColumn fx:id="HeurArretRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Heur Arret" />
+                  <TableColumn fx:id="HeurRepriseRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Heur Reprise" />
+                  <TableColumn fx:id="NombreOpRAColumn" maxWidth="96.0" minWidth="96.0" prefWidth="96.0" text="Nbr Opérat" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="1653.0" prefHeight="64.0" prefWidth="960.0" text="Remarque: Remplir la colone détéction par le type d'audit en cas des audit qualité selon le suivant">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="1713.0" prefHeight="64.0" prefWidth="960.0" text="A1: Première Pièce               A2: Validation coupe pistolet               A3: Audit produit fini              A4: Test d'étanchiété              A5: Circuit de retouches">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="Enregistrer" layoutX="368.0" layoutY="1887.0" onAction="#EnregistrerClicked" prefHeight="64.0" prefWidth="256.0" text="Enregistrer">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="32.0" layoutY="1016.0" prefWidth="256.0" text="Réservé au TeamLeader">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="686.0" prefWidth="256.0" text="Réservé au TeamLeader">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="AjouterRDQ" layoutX="873.0" layoutY="656.0" onAction="#AjouterRDQclicked" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+      <JFXButton fx:id="SupprimerRDQ" layoutX="770.0" layoutY="656.0" onAction="#SupprimerRDQclicked" prefHeight="32.0" prefWidth="96.0" text="Supprimer" />
+      <JFXButton fx:id="AjouterRP" layoutX="866.0" layoutY="989.0" onAction="#AjouterRPclicked" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+      <JFXButton fx:id="SupprimerRP" layoutX="762.0" layoutY="989.0" onAction="#SupprimerRPclicked" prefHeight="32.0" prefWidth="96.0" text="Supprimer" />
+      <JFXButton fx:id="AjouterRA" layoutX="872.0" layoutY="1582.0" onAction="#AjouterRAclicked" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+      <JFXButton fx:id="SupprimerRA" layoutX="770.0" layoutY="1582.0" onAction="#SupprimerRAclicked" prefHeight="32.0" prefWidth="96.0" text="Supprimer" />
+      <Label fx:id="dateLabel" layoutX="67.0" layoutY="20.0" prefHeight="18.0" prefWidth="116.0" text="Label" />
+      <Label fx:id="teamLeaderLabel" layoutX="132.0" layoutY="68.0" prefHeight="18.0" prefWidth="141.0" text="Label" />
+      <Label fx:id="clientLabel" layoutX="253.0" layoutY="20.0" prefHeight="18.0" prefWidth="108.0" text="Label" />
+      <Label fx:id="ligneLabel" layoutX="438.0" layoutY="22.0" prefHeight="18.0" prefWidth="96.0" text="Label" />
+      <Label fx:id="techQualitéLabel" layoutX="463.0" layoutY="68.0" prefHeight="18.0" prefWidth="142.0" text="Label" />
+      <Label fx:id="OptLabel" layoutX="800.0" layoutY="68.0" prefHeight="18.0" prefWidth="116.0" text="Label" />
+      <Label fx:id="equipeLabel" layoutX="738.0" layoutY="22.0" prefHeight="18.0" prefWidth="96.0" text="Label" />
+      <Label fx:id="shiftLabel" layoutX="903.0" layoutY="22.0" prefHeight="18.0" prefWidth="96.0" text="Label" />
+   </children>
+         <stylesheets>
+            <URL value="@CSS/Administration.css" />
+            <URL value="@CSS/tableView.css" />
+         </stylesheets>
+</AnchorPane>
+  </content>
+</ScrollPane>
